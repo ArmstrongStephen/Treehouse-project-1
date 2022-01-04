@@ -14,6 +14,7 @@ import statistics
 saved_attempts = []
 high_score = []
 
+# ask user if they want to play again, in N display median, mean, and mode or saved_attempts
 def play_again():
     play_again = input("Would you like to play again? Y/N \n").lower()
     while play_again != 'y' and play_again != 'n':
@@ -34,7 +35,7 @@ def play_again():
         return True
         
     
-
+# check is users guess is less than, equal to or higher than the hidden number
 def check_guess(guess, winning_number, guess_count):
     if guess < winning_number:
         print("I'ts Higher")
@@ -85,6 +86,7 @@ def start_game():
 
     while True:
       try:
+          # verify guess is between 1 and 100. also checks that guess is a number
         guess = int(input("Pleas enter a number between 1 and 100: "))
         if guess < 1 or guess > 100:
           raise(ValueError)
