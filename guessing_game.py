@@ -100,6 +100,7 @@ def start_game():
             exit = play_again()
             if exit == True:
                 break
+            break
     
 
 
